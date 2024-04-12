@@ -1,0 +1,64 @@
+/* ================ Courses Section ================ */
+
+.courses {
+  margin-top: 2rem;
+}
+
+.courses__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.course {
+  background: transparent;
+  text-align: center;
+  border: 1px solid transparent;
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.course::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--bg1-color);
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.course:hover::before {
+  top: 100%;
+}
+
+.course__info {
+  padding: 2rem;
+}
+
+.course__info p {
+  margin: 1.2rem 0 2rem;
+  font-size: 0.9rem;
+}
+/* ================= Media queries (Tablet) =================== */
+
+@media screen and (max-width: 1024px) {
+  .courses {
+    margin-top: 0;
+  }
+
+  .courses__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================= Media queries (Phone) =================== */
+
+@media screen and (max-width: 600px) {
+  .courses__container {
+    grid-template-columns: 1fr;
+  }
+}
+

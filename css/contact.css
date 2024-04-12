@@ -1,0 +1,170 @@
+.contact__container {
+  background: var(--bg1-color);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 4rem;
+  height: 30rem;
+  margin: 7rem auto;
+  border-radius: 1rem;
+  animation: goLeft 1s ease-out;
+}
+
+/* ============ Aside =============== */
+
+.contact__aside {
+  background: var(--primary-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  position: relative;
+  bottom: 10rem;
+  animation: appear 1s ease-out 1.1s forwards ;
+  opacity: 0;
+}
+
+.aside__image {
+  width: 12rem;
+  margin-bottom: 2rem;
+}
+
+.contact__aside h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact__aside p {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.contact__details li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact__socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 3rem;
+}
+
+.contact__socials a {
+  background: var(--bg1-color);
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.contact__socials a:hover {
+  background: transparent;
+}
+
+/* ============ Form =============== */
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-right: 4rem;
+}
+
+.form__name {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.contact__form input[type="text"] {
+  width: 50%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-color);
+  color: var(--white-color);
+}
+
+.contact__form .btn {
+  width: max-content;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* ================== Media Queries (Tablet) ======================== */
+
+@media screen and (max-width: 1024px) {
+  .contact__container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .contact__aside {
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  .contact__form {
+    align-self: center;
+    margin-right: 1.5rem;
+  }
+}
+
+/* ================== Media Queries (Phone) ======================== */
+
+@media screen and (max-width: 600px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .contact__form {
+    margin: 0 1.5rem 3rem;
+  }
+
+  .form__name {
+    flex-direction: column;
+
+  }
+
+  .form__name input[type="text"] {
+    width: 100%;
+  }
+} 
+
+
+  /* ================== Animations ======================== */
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes goLeft {
+    from {
+      margin-top: -100%;
+    }
+
+    to {
+      margin-top: 7rem;
+    }
+  }

@@ -1,0 +1,164 @@
+/* ================ Global Styling ================ */
+
+:root {
+  --primary-color: #6c63ff;
+  --success-color: #00bf8e;
+  --warning-color: #f7c94b;
+  --danger-color: #f75842;
+  --danger-variant: rgba(247, 88, 66, 0.4);
+  --white-color: #fff;
+  --light-color: #rgba(255, 255, 255, 0.7);
+  --black-color: #000;
+  --bg-color: #1f2641;
+  --bg1-color: #2e3267;
+  --bg2-color: #424890;
+
+  --lg-container: 76%;
+  --md-container: 90%;
+  --sm-container: 94%;
+
+  --transition: all 400ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  background: var(--bg-color) url(../images/bg-texture.png);
+  font-family: "Montserrat", sans-serif;
+  color: var(--white-color);
+  line-height: 1.7;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: var(--lg-container);
+  margin: 0 auto;
+}
+
+section {
+  padding-block: 6rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+a {
+  color: var(--white-color);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--white-color);
+  color: var(--black-color);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+.primary-btn {
+  background: var(--danger-color);
+  color: var(--white-color);
+}
+
+.scroll__icon {
+  position: fixed;
+  right: 2rem;
+  bottom: 5rem;
+  background: var(--bg1-color);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  display: none;
+  animation: appear 1s linear forwards;
+  z-index: 1000;
+}
+
+/* ================= Media queries (Tablet) =================== */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--md-container);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ================= Media queries (Phone) =================== */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--sm-container);
+  }
+}
